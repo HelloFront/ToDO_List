@@ -26,7 +26,7 @@ class Input extends React.Component {
       <div className='input_block'>
         <div>
           <img src={iconTask} alt="icon" />
-          <input value={this.state.value} onChange={this.updateLocalState.bind(this)} placeholder='Введите название задачи' type="text" />
+          <input value={this.state.value} onChange={this.updateLocalState.bind(this)} placeholder='Введите название' type="text" />
         </div>
         <Button variant="outlined" 
           onClick={() => {
