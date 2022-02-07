@@ -18,8 +18,7 @@ class ToDoMainBlock extends React.Component {
   }
   componentDidMount() {
     const stateStorage = JSON.parse(localStorage.getItem('state'));
-    console.log(stateStorage);
-    if(stateStorage.tasks.length !== 0) {
+    if(stateStorage && stateStorage.tasks.length !== 0) {
       let state = {...this.state};
       state = stateStorage;
 
