@@ -13,6 +13,19 @@ class ToDoMainBlock extends React.Component {
       }
   }
 
+  componentDidUpdate() {
+    localStorage.setItem('state', JSON.stringify(this.state))
+  }
+  componentWillMount() {
+    const stateStorage = JSON.parse(localStorage.getItem('state'));
+    if(stateStorage.tasks.length !== 0) {
+      let state = {...this.state};
+      state = stateStorage;
+
+      this.setState(state)
+    } 
+  }
+
   changeInputValue(id) {
     let arr = [...this.state.tasks];
     arr.forEach(item => item.id === id? item.isChange = !item.isChange : null)
