@@ -112,6 +112,7 @@ class ToDoMainBlock extends React.Component {
         let obj = {...this.state.settings}
         obj.btnShowAll = true;
         obj.btnShowDone = !obj.btnShowAll;
+        obj.btnSelectAll = false;
 
         this.setState({settings: obj});
       }

@@ -11,7 +11,7 @@ class FilterTasks extends React.Component {
         <div className="select_all">
           <button 
             className='btn_select_all'
-            style={btnSelectAll? {opacity: 1} : {opacity: .5} }
+            style={btnSelectAll? {opacity: 1} : {opacity: .5}}
           >
             <img 
               name='select'
